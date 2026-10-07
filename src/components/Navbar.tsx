@@ -42,9 +42,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEvaluator }) => {
         <div className="flex items-center justify-between">
           {/* Brand Logo */}
           <a
-            href="#"
+            href="#app-root"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             id="brand-logo"
-            className="flex items-center gap-3 group focus:outline-none"
+            className="flex items-center gap-3 group focus:outline-none cursor-pointer"
           >
             <div className="w-10 h-10 rounded-full bg-[#C85A32] text-white flex items-center justify-center shadow-md group-hover:bg-[#A9431E] transition-colors">
               <Camera className="w-5 h-5" />
